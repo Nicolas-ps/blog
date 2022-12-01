@@ -1,0 +1,12 @@
+header {
+    width: 100%;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+header > .container-list {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}

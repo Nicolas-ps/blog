@@ -1,0 +1,16 @@
+.menu-bar {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    background-color: transparent;
+}
+
+.menu-bar > li {
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.menu-bar > li:hover {
+    color: #131717;
+}
+

@@ -1,0 +1,7 @@
+.anchor {
+    width: 20%;
+}
+
+.anchor > h3 {
+    font-size: 1.3rem;
+}

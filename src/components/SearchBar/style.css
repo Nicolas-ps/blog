@@ -1,0 +1,27 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar > input {
+    height: 100%;
+    padding: 4.5%;
+
+    border: 1px solid black ;
+}
+
+.searchBar > .button {
+    background-color: white;
+    text-align: center;
+    border-width: 1px 1px 1px 0;
+
+    height: 100%;
+
+    padding: 2%;
+}
+
+.searchBar > .button svg {
+    margin-right: 10%;
+    height: 24px;
+}
