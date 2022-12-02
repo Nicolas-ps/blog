@@ -5,6 +5,7 @@ import useFetch from "./hooks/useFetch";
 import {Layout} from "./components/Layout";
 import Home from "./components/Home";
 import dayjs from "dayjs";
+import {NotificationContainer} from 'react-notifications';
 
 dayjs.locale('pt-br')
 
@@ -16,6 +17,7 @@ const App = () => {
             <Layout>
                 <Home posts={posts.data}/>
             </Layout>
+            <NotificationContainer/>
         </div>
     );
 }
