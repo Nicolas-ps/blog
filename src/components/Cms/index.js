@@ -1,12 +1,29 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import ReactQuill from "react-quill";
 import Header from "../Header";
 import axios from "axios";
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
+import useFetch from "../../hooks/useFetch";
+import useQueryString from "../../hooks/useQueryString";
+import { useNavigate} from "react-router-dom";
 
 const Cms = () => {
     const [text, setText] = useState('');
+    const navigate = useNavigate();
+
+    let accessToken = useQueryString().get('access_token');
+    let hasAccess = useFetch('http://api-blog/api/cms', {
+        'Authorization': accessToken
+    });
+
+    if (! hasAccess) return <h1>Carregando...</h1>;
+
+    if (! hasAccess.success) {
+        alert('Você não pode entrar aqui!');
+        navigate('/');
+    }
+
     const body = {
         title: "Oi moanoite",
         body: text

@@ -1,12 +1,16 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
 
-const useFetch = function (url) {
+const useFetch = function (url, headers= {}) {
     const [response, setResponse] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    const config = {
+        headers: headers
+    };
+
     useEffect(() => {
-        axios.get(url)
+        axios.get(url, config)
             .then(function (response) {
                 setIsLoading(false);
                 setResponse(response.data);
