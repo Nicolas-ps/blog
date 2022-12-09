@@ -20,7 +20,9 @@ const PostItem = (props) => {
 
     return (
         <div className='box-post'>
-            <Link to={`/post/${id}`}><h1 className='title text-3xl hover:text-gray-600 cursor-pointer'>{title}</h1></Link>
+            <Link to={`/post/${id}`} className="w-full">
+                <h1 className='title text-3xl text-left hover:text-gray-600 cursor-pointer'>{title}</h1>
+            </Link>
             <div className='meta'>
                 <div>
                     <span className='date text-stone-500'>Postado {createdAt} por {author_name}</span>
