@@ -37,7 +37,7 @@ const Post = () => {
                         <h1 className='text-3xl title'>{post.title ?? ''}</h1>
                         {updated()}
                         <img src={post.image_url ?? ''} className='mt-5 rounded-md'/>
-                        <p className='mt-5 leading-9 text-justify'>{post.body ?? ''}</p>
+                        <p className='mt-5 leading-7 text-justify' dangerouslySetInnerHTML={{ __html: post.body }}></p>
                         <span className='date text-stone-500 mr-auto mt-5'>Postado por {post.author.name ?? ''} em {createdAt}</span>
                     </div>
                 </Layout>
